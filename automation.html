@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body>
+
+<h1 id="Introduction">Introduction</h1>
+
+<p>&quot;Simon Napier-Bell told me that bands who don&#39;t fight tend to be
+creatively moribund. He recalled an argument between the Yardbirds in the
+recording studio, over whether the guitarist, Jeff Beck, should be allowed a
+solo. Beck felt he wasn&#39;t being given enough room to express himself.
+Eventually, the others grudgingly let him have a few bars on a song called
+&#39;The Nazz Are Blue.&#39; <a
+href="https://www.youtube.com/watch?v=LPpSh1CkLLI">https://www.youtube.com/watch?v=LPpSh1CkLLI</a>&quot;.</p>
+
+<p>Napier-Bell sat with the band and watched as Beck recorded his solo. When it
+came to his bars, Beck simply struck one note and let it bleed into feedback,
+all the while glowering with defiance at his bandmates. &#39;Everything he felt
+was in that note.&#39; said Napier-Bell. &#39;It&#39;s the high point of the
+album.&#39;&quot;&#xFEFF;</p>
+
+
+<h1 id="Services">The services we offer</h1>
+
+<h2 id="Dita-in-Git">Dita in Git</h2>
+
+<p>Let our customers use S3, BitBucket, GitHub, or GitLab for their content
+manager, then use Xref to analyze their content and publish it with our
+parallel publishing pipe line on AWS.</p>
+
+<p>Specialize in liberating (ex) SDL customers!</p>
+
+<h2 id="Dita-IO">Dita IO</h2>
+
+<p>Using Dita Extensions create Dita documents with forms in them to replace
+PDF forms.</p>
+
+<h2 id="Information-Model-Automation">Information Model Automation</h2>
+
+<p>Automate the creation of the Information Model and drive automation with the
+Information Model.</p>
+
+<p>my $im = q(Information Model);</p>
+
+<p>An $im is produced for each Ryffine customer. There is a lot of text common
+to each $im. The Dita for an $im could perhaps be produced with some minimal
+automation to substitute variables into text?</p>
+
+<h2 id="Translation-services">Translation services</h2>
+
+<p>Translate documents using AWS translate, see: <a
+href="https://docs.aws.amazon.com/translate/latest/dg/what-is.html">https://docs.aws.amazon.com/translate/latest/dg/what-is.html</a>
+for languages available.</p>
+
+<h2 id="Speech-Service">Speech Service</h2>
+
+<p>Translate text to speech using AWS Polly: <a
+href="https://aws.amazon.com/polly/features/">https://aws.amazon.com/polly/features/</a>
+so that we can produce documents that speak!</p>
+
+<h2 id="Text-deduplication">Text deduplication</h2>
+
+<p>Find duplicate text for customers. We have the software and the compute
+power - we just need access to customer data which we will be able to get
+conveniently if the data is held in Git*.</p>
+
+<h1 id="Operational-Improvements">Operational Improvements</h1>
+
+<h2 id="Clean-Operational-Environment">Clean Operational Environment</h2>
+
+<p>We spend too much time shuffling data between ourselves and our
+customers.</p>
+
+<p>Example: moving files between Aci, Ryffine and BlueStream burnt far more
+time than just sending us a complete dump of the data in the first place. On
+the 4 occasions they sent us a zip full of files they managed to do things in a
+slightly different way each time which we then had to debug (at scale) to
+ameliorate the consequences.</p>
+
+<p>Example: using ftp versus having the customer put all their files in Github,
+or S3, or onto an AWS instance i.e. in the cloud where we can work on them and
+the customer can see what we are doing.</p>
+
+<h2 id="Clean-data">Clean data</h2>
+
+<p>At 4.00am after a two hour run on one of the largest machines at AWS I
+discovered that Kohler had added two ampersands to their latest spread sheet
+resulting in a failure to reach the goal of 100% lint.</p>
+
+<h2 id="Avoid-Fragmenting-Our-Efforts">Avoid Fragmenting Our Efforts</h2>
+
+<p>More generally, stop clients from dictating unscalable solutions because
+they have no experience of scale whereas we do. Scale always magnifies the
+slightest inconsistencies and errors which are invisible at the small scale
+normally encountered in a customer&#39;s daily life. These invisible problems
+become highly visible and thus problematic to us when we are working on lots of
+their files at once.</p>
+
+<p>Conversely, it is much more profitable to work on big projects than small
+ones!</p>
+
+<p>Dividing one big potentially profitable project into 4 small projects
+potentially produces 4 unprofitable projects because of all the task switching
+with other projects going on simultaneously.</p>
+
+<p>However, we should still do a PoC on the square root of the number of
+documents involved if we are unfamiliar with the source xml.</p>
+
+<p>Every-one should read: &quot;The Mythical Man Month&quot;!!!!!</p>
+
+<h2 id="The-ideal-conversion">The ideal conversion</h2>
+
+<p>(1) We clean up the customers data</p>
+
+<p>(2) We do a proof of concept for the customer using 1 or 2 representative
+documents from each author (and their style guide).</p>
+
+<p>(3) While we do the PoC the customer practices taking snapshots of all their
+content. When the PoC is done the customer sends us a snapshot of ALL their
+content.</p>
+
+<p>(4) We enhance the conversion program and show the customer the proposed
+results applied to their test snapshot.</p>
+
+<p>(5) When the customer <b>reasonably</b> happy with the results they take a
+new production snapshot - preferably on Friday and send it to us.</p>
+
+<p>(7) We run the conversion program and send the results back within a few
+hours.</p>
+
+<p>(8) The customer checks the results and if good accepts them into their
+production system and starts using them on Monday.</p>
+
+<p>(9) If the customer discovers more changes they would like to make they
+should: (a) Send us a new snap shot and a description of the changes to be made
+(b) We write/test/run the code to perform the requested change (c) If the
+customer is using a Git based system we send them the changed files as new
+branches and the authors merge the branches as they see fit. (d) If the
+customer is not using a Git based system we send them differential patches to
+apply as they see fit. This is identical to the process that Git uses when
+merging two branches so there is nothing novel here. (e) Repeat as necessary
+until done.</p>
+
+<p>Ideally we would bill after each step and not advance to the next step until
+we are confident with the customers willingness to pay for the work completed
+so far.</p>
+
+<p>This approach allows us to get the maximum benefit from the conversion
+effort in the shortest amount of time. Alternative solutions divide the work up
+too much and spend too much time redoing the conversion to accommodate trailing
+minor changes much better done as described in (8).</p>
+
+<p>A major benefit of organizing work in this manner is that the hard part (the
+conversion) can be done in one sprint without swapping to other projects
+because all the data is available.</p>
+
+<p>The subsequent easier incremental work can be done in short self contained
+sprints gain without swapping.</p>
+
+<h2 id="The-ideal-ticket">The ideal ticket.</h2>
+
+<p>(1) Tells me how to find nodes to which to apply step (2) (2) Provides a
+worked example step by step demonstrating the proposed transformation (3)
+Provides a before file to become part of the regression test suite (4) Provides
+an after file to show me the expected results (5) Might provide a wild example
+if relevant</p>
+
+<p>A well rehearsed ticket can be programmed while listening to &quot;In my
+time of dying&quot; et al.</p>
+
+<h2 id="Reduce-Travel-increase-Internet">Reduce Travel increase Internet</h2>
+
+<p>Is it possible that the existing travel budget, if suitably redirected,
+could provide every-one with full fiber access both in the office and at
+home?</p>
+
+<p>It would be much more efficient and safer to travel by using photons rather
+than people in person!</p>
+
+<h2 id="Cross-train">Cross train</h2>
+
+<p>We should spend time showing each other how we get things done so that the
+best techniques get adopted more widely and improved there upon.</p>
+
+<p>(Example: I am not very sure what the Information Model is used for)</p>
+
+<h2 id="Write-more-stuff-down-in-Dita-so-we-do-not-forget-how-to-do-it">Write more stuff down in Dita so we do not forget how to do it</h2>
+
+<p>That is the essence of what we are telling our customers so we should
+probably do it too!</p>
+
+</body>
+
+</html>
+
+
+
